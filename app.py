@@ -69,9 +69,13 @@ def clean_questions(raw):
 
 
 @app.route("/")
-def index():
-    return render_template("index.html")
+def landing():
+    return render_template("landing.html")
 
+
+@app.route("/app")
+def quiz_app():
+    return render_template("index.html")
 
 @app.route("/api/quizzes", methods=["GET"])
 def list_quizzes():

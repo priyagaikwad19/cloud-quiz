@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cloud Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: dark;
+    --paper: #0f1424; --surface: #181f35; --ink: #e8ecf8; --muted: #9aa5c4;
+    --line: #2b3558; --brand: #4569f0; --brand-dark: #3453cc; --link: #9db4ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Nunito Sans", system-ui, sans-serif; font-size: 18px; line-height: 1.6; }
+  h1, h2, .logo, .btn { font-family: "Sora", system-ui, sans-serif; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 22px; }
+  nav { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; }
+  .logo { font-weight: 700; font-size: 22px; color: var(--ink); text-decoration: none; }
+  .logo span { color: var(--link); }
+  .btn { display: inline-block; background: var(--brand); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 26px; border-radius: 10px; }
+  .btn:hover { background: var(--brand-dark); }
+  .btn.small { padding: 10px 18px; font-size: 15px; }
+  :focus-visible { outline: 3px solid #9db4ff; outline-offset: 2px; }
+  .hero { padding: 70px 0 60px; max-width: 700px; }
+  h1 { font-size: clamp(32px, 6vw, 52px); line-height: 1.12; margin: 0 0 18px; }
+  .hero p { color: var(--muted); margin: 0 0 30px; max-width: 540px; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); }
+  .features div { padding: 28px 24px 28px 0; }
+  .features div + div { padding-left: 24px; border-left: 1px solid var(--line); }
+  h2 { font-size: 19px; margin: 0 0 8px; }
+  .features p { color: var(--muted); font-size: 16px; margin: 0; }
+  .stack { border-top: 1px solid var(--line); padding: 28px 0 60px; color: var(--muted); font-size: 16px; }
+  .stack strong { color: var(--ink); font-family: "Sora", sans-serif; font-weight: 600; }
+  @media (max-width: 700px) {
+    .features { grid-template-columns: 1fr; }
+    .features div, .features div + div { padding: 22px 0; border-left: none; border-top: 1px solid var(--line); }
+    .features div:first-child { border-top: none; }
+    .hero { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <a class="logo" href="/">Cloud<span>Quiz</span></a>
+    <a class="btn small" href="/app">Open the app</a>
+  </nav>
+
+  <section class="hero">
+    <h1>Quizzes your whole class can take from one link.</h1>
+    <p>Write your questions, share the link, and see everyone's score on a leaderboard. Nothing to install, and it runs in the cloud.</p>
+    <a class="btn" href="/app">Get started</a>
+  </section>
+
+  <section class="features">
+    <div>
+      <h2>Build in minutes</h2>
+      <p>Add a title, type your questions and options, and mark the right answer.</p>
+    </div>
+    <div>
+      <h2>Fair scoring</h2>
+      <p>Answers stay on the server until a quiz is submitted, so nobody can peek.</p>
+    </div>
+    <div>
+      <h2>Live leaderboard</h2>
+      <p>Every quiz ranks its top ten scores so players can compete.</p>
+    </div>
+  </section>
+
+  <section class="stack">
+    <strong>Built with</strong> Flask and Python, a SQLite database, GitHub for the code, and Render for cloud hosting.
+  </section>
+</div>
+</body>
+</html>
